@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
 };
 
-const EXCLUDED_PATHS = ['/admin', '/staff', '/leader', '/super-staff', '/auth'];
+//const EXCLUDED_PATHS = [ '/leader'];
 
 export default function RootLayout({
   children,

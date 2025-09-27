@@ -1,5 +1,4 @@
 // app/leader/components/LeaderHeader.tsx
-
 'use client';
 
 import { HiBell, HiMenu, HiX } from 'react-icons/hi';
@@ -32,7 +31,7 @@ export default function LeaderHeader() {
         <div className="relative">
           <HiBell className="w-6 h-6 text-gray-600" />
           {hasAlert && (
-            <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"></span>
+            <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-ping"></span>
           )}
         </div>
       </header>
@@ -48,12 +47,12 @@ export default function LeaderHeader() {
           <button className="relative p-2 text-gray-600 hover:bg-gray-100 rounded-xl transition group">
             <HiBell className="w-6 h-6 group-hover:scale-110 transition-transform" />
             {hasAlert && (
-              <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-700 rounded-full animate-pulse"></span>
+              <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-ping"></span>
             )}
           </button>
 
           {/* Avatar */}
-          <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center text-white font-semibold shadow-lg">
+          <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold shadow-lg">
             M
           </div>
         </div>
@@ -61,13 +60,19 @@ export default function LeaderHeader() {
 
       {/* Mobile Sidebar Overlay */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 z-50 flex animate-fadeIn">
+        <div className="md:hidden fixed inset-0 z-50 flex">
+          {/* Overlay */}
+          <div
+            className="flex-1 bg-black bg-opacity-50 backdrop-blur-sm"
+            onClick={() => setIsMenuOpen(false)}
+          ></div>
+          
           {/* Sidebar */}
-          <div className="w-60 bg-white/95 backdrop-blur-md shadow-xl border-r border-gray-200/60 p-6 transform animate-slideIn">
+          <div className="w-64 bg-white/95 backdrop-blur-md shadow-2xl border-r border-gray-200/60 p-6 transform transition-transform duration-300 ease-out">
             <div className="flex items-center justify-between mb-8">
               <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">ES</span>
+                <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center">
+                  <span className="text-white font-bold text-sm">M</span>
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-800">Meron</h3>
@@ -76,7 +81,7 @@ export default function LeaderHeader() {
               </div>
               <button
                 onClick={() => setIsMenuOpen(false)}
-                className="text-gray-500 hover:text-gray-700"
+                className="text-gray-500 hover:text-gray-700 p-1"
               >
                 <HiX className="w-5 h-5" />
               </button>
@@ -93,43 +98,23 @@ export default function LeaderHeader() {
                 <Link
                   key={item.name}
                   href={item.path}
-                  className="group flex items-center space-x-3 px-3 py-3 text-sm text-gray-700 hover:bg-sky-50 hover:text-sky-700 rounded-2xl transition-all"
+                  className="group flex items-center space-x-3 px-3 py-3 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-700 rounded-xl transition-all duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <div className="w-2 h-2 bg-transparent group-hover:bg-sky-500 rounded-full transition"></div>
-                  {item.name}
+                  <div className="w-2 h-2 bg-transparent group-hover:bg-indigo-500 rounded-full transition-all duration-200"></div>
+                  <span>{item.name}</span>
                 </Link>
               ))}
               <button
-                className="w-full text-left px-3 py-3 text-sm text-gray-600 hover:bg-red-50 hover:text-red-600 rounded-2xl transition-all mt-6"
+                className="w-full text-left px-3 py-3 text-sm text-gray-600 hover:bg-red-50 hover:text-red-600 rounded-xl transition-all duration-200 mt-6"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Logout
               </button>
             </nav>
           </div>
-
-          {/* Overlay */}
-          <div
-            className="flex-1 bg-black bg-opacity-40"
-            onClick={() => setIsMenuOpen(false)}
-          ></div>
         </div>
       )}
     </>
   );
 }
-
-// Add to globals.css
-/*
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-@keyframes slideIn {
-  from { transform: translateX(-100%); }
-  to { transform: translateX(0); }
-}
-.animate-fadeIn { animation: fadeIn 0.2s ease-out; }
-.animate-slideIn { animation: slideIn 0.3s ease-out; }
-*/
