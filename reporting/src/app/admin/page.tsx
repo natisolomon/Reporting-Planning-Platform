@@ -55,7 +55,7 @@ export default function AdminDashboard() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-pink-50 to-red-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <motion.div
@@ -64,7 +64,7 @@ export default function AdminDashboard() {
           className="flex flex-col md:flex-row md:items-center md:justify-between mb-8 gap-6"
         >
           <div className="flex items-center gap-4">
-            <div className="w-14 h-14 bg-gradient-to-br from-red-500 to-pink-600 rounded-2xl flex items-center justify-center shadow-lg">
+            <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg">
               <HiHome className="w-7 h-7 text-white" />
             </div>
             <div>
@@ -77,18 +77,10 @@ export default function AdminDashboard() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-2 px-4 py-2.5 border border-gray-300 text-gray-700 rounded-xl hover:bg-gray-100 transition text-sm font-medium"
+              className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-600 text-white px-5 py-2.5 rounded-xl hover:from-red-700 hover:to-pink-700 transition text-sm font-medium shadow-lg hover:shadow-xl"
             >
               <HiDownload className="w-4 h-4" />
               Export Report
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-2 bg-gradient-to-r from-red-600 to-pink-600 text-white px-5 py-2.5 rounded-xl hover:from-red-700 hover:to-pink-700 transition text-sm font-medium shadow-lg hover:shadow-xl"
-            >
-              <HiPlus className="w-4 h-4" />
-              New Alert
             </motion.button>
           </div>
         </motion.div>
