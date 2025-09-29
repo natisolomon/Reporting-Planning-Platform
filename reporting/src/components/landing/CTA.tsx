@@ -1,7 +1,6 @@
 // app/components/landing/CTA.tsx
 
 import Link from 'next/link';
-import { HiHeart } from 'react-icons/hi';
 
 export default function CTA() {
   return (

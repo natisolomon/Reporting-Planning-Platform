@@ -2,46 +2,17 @@
 
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
-import { HiHeart, HiFilm, HiMenu, HiX } from 'react-icons/hi';
+import { HiMenu, HiX } from 'react-icons/hi';
 
 export default function LandingHeader() {
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
-
-  // Open immediately on hover (desktop)
-  const handleMouseEnter = (name: string) => {
-    if (timerRef.current) clearTimeout(timerRef.current);
-    setOpenDropdown(name);
-  };
-
-  // Delayed close with buffer
-  const handleMouseLeave = () => {
-    if (timerRef.current) clearTimeout(timerRef.current);
-    timerRef.current = setTimeout(() => {
-      setOpenDropdown(null);
-    }, 100);
-  };
-
-  // Toggle dropdown on click (for mobile)
-  const handleMobileClick = (name: string) => {
-    setOpenDropdown(openDropdown === name ? null : name);
-  };
 
   // Close mobile menu when link is clicked
   const closeMenu = () => {
     setIsMenuOpen(false);
-    setOpenDropdown(null);
   };
-
-  // Cleanup on unmount
-  useEffect(() => {
-    return () => {
-      if (timerRef.current) clearTimeout(timerRef.current);
-    };
-  }, []);
 
   return (
     <header className="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-gray-200/50">
@@ -79,7 +50,7 @@ export default function LandingHeader() {
           >
             Login <span className="text-lg">→</span>
           </Link>
-          
+
         </nav>
 
         {/* Desktop Buttons */}
