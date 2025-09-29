@@ -4,6 +4,7 @@
 import { HiCalendar, HiStar, HiUserGroup, HiLocationMarker, HiTicket, HiPlus, HiArrowRight, HiSearch } from 'react-icons/hi';
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // ✅ Use local images from: public/images/events/
@@ -168,7 +169,7 @@ export default function AdminEventsPage() {
                 >
                   {/* Image */}
                   <div className="h-48 overflow-hidden">
-                    <img
+                    <Image
                       src={event.image}
                       alt={event.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"

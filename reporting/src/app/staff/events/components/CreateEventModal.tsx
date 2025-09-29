@@ -2,7 +2,7 @@
 'use client';
 
 import { useState } from 'react';
-import { HiX, HiCalendar, HiLocationMarker, HiUserGroup, HiPhotograph } from 'react-icons/hi';
+import { HiX, HiCalendar, HiLocationMarker, HiUserGroup } from 'react-icons/hi';
 import { motion } from 'framer-motion';
 
 interface EventFormData {
@@ -32,8 +32,6 @@ export default function CreateEventModal({ onClose }: CreateEventModalProps) {
     image: null,
   });
 
-  const [imagePreview, setImagePreview] = useState<string | null>(null);
-
   const categories = [
     { id: 'workshop', label: 'Workshop', color: 'bg-blue-100 text-blue-800' },
     { id: 'retreat', label: 'Retreat', color: 'bg-emerald-100 text-emerald-800' },
@@ -47,14 +45,6 @@ export default function CreateEventModal({ onClose }: CreateEventModalProps) {
   ) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-      const file = e.target.files[0];
-      setFormData(prev => ({ ...prev, image: file }));
-      setImagePreview(URL.createObjectURL(file));
-    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {

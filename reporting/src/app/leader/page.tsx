@@ -10,7 +10,7 @@ import {
 } from 'react-icons/hi';
 import { DashboardBanner, ActionCard, NotificationCard } from './components/Card';
 
-export default function LeaderDashboard() {
+export default function Leader() {
   // Mock Data
   const campus = "Unity University";
   const region = "Piassa Region";

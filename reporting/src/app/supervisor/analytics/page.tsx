@@ -4,7 +4,7 @@
 import { useState } from 'react';
 import { 
   HiUserGroup, HiClipboardList, HiChartBar, HiLocationMarker, 
-  HiTrendingUp, HiSearch, HiArrowUp 
+  HiTrendingUp, HiArrowUp 
 } from 'react-icons/hi';
 import { motion, AnimatePresence } from 'framer-motion';
 

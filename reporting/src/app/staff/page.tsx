@@ -9,7 +9,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Banner from './components/Banner';
 
-export default function StaffDashboard() {
+export default function Staff() {
   const campus = "Unity University";
   const region = "Piassa Region";
   const pendingActions = 1;

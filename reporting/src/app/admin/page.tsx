@@ -6,15 +6,10 @@ import {
   HiUsers,
   HiClipboardList,
   HiChartBar,
-  HiCalendar,
   HiDocumentReport,
-  HiExclamation,
-  HiCheckCircle,
   HiLocationMarker,
-  HiFire,
   HiTrendingUp,
-  HiDownload,
-  HiPlus
+  HiDownload
 } from 'react-icons/hi';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';

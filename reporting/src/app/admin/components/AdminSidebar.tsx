@@ -7,17 +7,11 @@ import {
   HiHome,
   HiUsers,
   HiClipboardList,
-  HiCurrencyDollar,
-  HiChartBar,
-  HiSpeakerphone,
   HiCog,
   HiBriefcase,
   HiShieldCheck,
-  HiUserGroup,
-  HiChevronDown,
-  HiChevronUp,
+  HiUserGroup
 } from 'react-icons/hi';
-import { useState } from 'react';
 
 const menuItems = [
   { name: 'Dashboard', path: '/admin', icon: HiHome },
@@ -30,7 +24,6 @@ const menuItems = [
 
 export default function AdminSidebar() {
   const pathname = usePathname();
-  const [isUsersOpen, setIsUsersOpen] = useState(false);
 
   const isActive = (path: string) => pathname === path || pathname.startsWith(path + '/');
 

@@ -1,7 +1,7 @@
 // app/admin/staff/page.tsx
 'use client';
 
-import { HiUser, HiMail, HiPhone, HiOfficeBuilding, HiCheck, HiX, HiUserGroup, HiSwitchHorizontal, HiSearch, HiPlus } from 'react-icons/hi';
+import { HiUser, HiMail, HiPhone, HiOfficeBuilding, HiCheck, HiX, HiUserGroup, HiSearch, HiPlus } from 'react-icons/hi';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 

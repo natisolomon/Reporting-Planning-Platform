@@ -1,6 +1,7 @@
 // app/layout.tsx
 
 import './globals.css';
+import { Providers } from './Providers';
 import { Inter } from 'next/font/google';
 import type { Metadata } from 'next';
 
@@ -27,9 +28,11 @@ export default function RootLayout({
         <meta name="format-detection" content="telephone=no, date=no, email=no, address=no" />
       </head>
       <body className={`${inter.variable} font-sans antialiased bg-gray-50 text-gray-800`}>
+        <Providers>
           <div className="min-h-screen flex flex-col">
             {children}
           </div>
+        </Providers>
       </body>
     </html>
   );

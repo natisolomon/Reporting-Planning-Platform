@@ -3,11 +3,10 @@
 
 import { useState } from 'react';
 import { 
-  HiOutlineExclamation, HiFire, HiClock, HiCheck, HiX, HiBell, 
+  HiOutlineExclamation, HiFire, HiClock, HiCheck, HiBell, 
   HiSearch, HiEye, HiArchive, HiLocationMarker, HiOfficeBuilding
 } from 'react-icons/hi';
 import { motion, AnimatePresence } from 'framer-motion';
-import Link from 'next/link';
 
 const alerts = [
   {

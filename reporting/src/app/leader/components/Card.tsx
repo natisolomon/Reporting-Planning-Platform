@@ -237,13 +237,13 @@ export function DashboardBanner({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay }}
-      className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200/60 backdrop-blur-sm"
+      className="bg-gradient-to-r from-sky-600 via-sky-700 to-blue-800 rounded-2xl p-6 shadow-sm border border-gray-200/60 backdrop-blur-sm"
     >
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
         {/* Left Section - Welcome & Location */}
         <div className="flex-1">
-          <h2 className="text-2xl font-bold text-gray-900">Good morning, Leader!</h2>
-          <p className="text-gray-600 mt-1 flex items-center">
+          <h2 className="text-2xl font-bold text-white">Good morning, Leader!</h2>
+          <p className="text-white/80 mt-1 flex items-center">
             <span className="font-medium">{campus}</span>
             <span className="mx-2 text-gray-300">•</span>
             <span>{region}</span>
@@ -258,8 +258,8 @@ export function DashboardBanner({
               <HiClipboardList className="w-5 h-5 text-blue-600" />
             </div>
             <div>
-              <p className="text-xs font-medium text-gray-500 uppercase tracking-wide">Last Report</p>
-              <p className="text-sm font-semibold text-gray-900">{lastReport}</p>
+              <p className="text-xs font-medium text-white uppercase tracking-wide">Last Report</p>
+              <p className="text-sm font-semibold text-white/90">{lastReport}</p>
             </div>
           </div>
 
@@ -269,8 +269,8 @@ export function DashboardBanner({
               <HiCheck className="w-5 h-5 text-emerald-600" />
             </div>
             <div>
-              <p className="text-xs font-medium text-gray-500 uppercase tracking-wide">Status</p>
-              <p className="text-sm font-semibold text-emerald-700">{fellowshipStatus}</p>
+              <p className="text-xs font-medium text-white uppercase tracking-wide">Status</p>
+              <p className="text-sm font-semibold text-green-500">{fellowshipStatus}</p>
             </div>
           </div>
         </div>

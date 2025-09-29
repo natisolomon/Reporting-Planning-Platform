@@ -1,6 +1,6 @@
 // app/super-staff/settings/page.tsx
 
-import { HiUser, HiMail, HiDeviceMobile, HiBell, HiShieldCheck, HiSave } from 'react-icons/hi';
+import { HiUser, HiBell, HiShieldCheck, HiSave } from 'react-icons/hi';
 
 export default function SettingsPage() {
   return (

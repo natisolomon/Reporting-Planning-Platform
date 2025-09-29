@@ -1,7 +1,7 @@
 // app/admin/components/AdminHeader.tsx
 'use client';
 
-import { HiBell, HiMenu, HiX, HiHome, HiUsers, HiClipboardList, HiChartBar, HiCalendar, HiLocationMarker, HiCog, HiShieldCheck, HiLogout } from 'react-icons/hi';
+import { HiBell, HiMenu, HiX, HiHome, HiUsers, HiClipboardList, HiCalendar, HiCog, HiShieldCheck, HiLogout } from 'react-icons/hi';
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
