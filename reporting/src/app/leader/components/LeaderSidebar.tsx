@@ -39,7 +39,7 @@ export default function LeaderSidebar() {
             <Link
               key={item.name}
               href={item.path}
-              className={`group flex items-center space-x-4 px-4 py-3.5 rounded-xl text-sm font-medium transition-all duration-300 relative
+              className={`group flex items-center space-x-4 px-2 py-3.5 rounded-xl text-sm font-medium transition-all duration-300 relative
                 ${
                   isActive
                     ? 'text-sky-700 bg-sky-50'
