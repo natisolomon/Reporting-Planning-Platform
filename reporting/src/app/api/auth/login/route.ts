@@ -1,7 +1,7 @@
 // app/api/auth/login/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 import { SignJWT } from 'jose';
-import { compare } from 'bcryptjs';
+import { compare } from 'bcrypt';
 import { getUserByEmail } from '@/lib/user'; // Adjust to your DB service
 
 export async function POST(req: NextRequest) {
